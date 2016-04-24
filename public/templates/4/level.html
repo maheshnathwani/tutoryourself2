@@ -1,0 +1,87 @@
+<div ng-controller="levelFourCtrl">
+<div>
+		<header class="navbar navbar-default navbar-fixed-top navbar-inner red-bg">
+            <div class="navbar-brand" ng-show="loggedIn">
+                  <desk-menu desk-keypress> <!-- Optional callback, either use regular ng-click -->
+                        <span class="flaticon-round-account-button-with-user-inside"></span>
+                        <desk-option label="{{currentUser.name}}">
+                              <desk-dropdown>
+                                    <desk-dd-option >
+                                          <desk-icon><i class="flaticon-google-drive-document"></i></desk-icon>
+                                          <desk-label>Account</desk-label>
+                                    </desk-dd-option>
+                                    <desk-dd-option ng-click="logout()">
+                                          <desk-icon><i class="flaticon-enter-arrow"></i></desk-icon>
+                                          <desk-label>Logout</desk-label>
+                                    </desk-dd-option>
+                              </desk-dropdown>
+                        </desk-option>
+                  </desk-menu>
+            </div>
+            <div class="container">
+                  <a class="heading"  href="#">Tutor Yourself</a>
+            </div>
+      </header>
+
+	<nav mfb-menu position="tr" effect="slidein" label="Menu"
+	     active-icon="flaticon-close-button" resting-icon="flaticon-menu-button"
+	     toggling-method="hover">
+	      <button mfb-button icon="flaticon-home-button" label="Home" ui-sref="home"></button>
+	      <button mfb-button icon="flaticon-create-group-button" label="Register/Login" ui-sref="login"></button>
+	      <button mfb-button icon="flaticon-two-rows-and-three-columns-layout" label="About Us" ui-sref="about"></button>
+	      <button mfb-button icon="flaticon-user-inside-bubble-speech" label="Contact" ui-sref="contact"></button>
+	</nav>
+</div>
+<div class="sub-header yellow-bg" style="margin-bottom: 0;" >
+    <button class="btn btn-fab blue-bg white pull-left " ui-sref="level({user:currentUser.username, id:(level - 1)})" ><span class="fa fa-arrow-left"></span></button>
+    <h1 class="white">Level 04</h1>
+    <button class="btn btn-fab blue-bg white pull-right " ng-class="{'disabled': nextLevel}" ui-sref="level({user:currentUser.username, id:(level + 1)})" ><span class="fa fa-arrow-right"></span></button>
+</div>
+<div class="row"  >
+	<div class="col-md-3 no-right-padding white-bg">
+		<div class="instruction-panel">
+			<div class="header blue-bg white">
+				<h4>Instructions Panel</h4>
+
+			</div>
+			<h4>LOOPS</h4>
+				<div class="instruction-body">
+					<p> A loop is a piece of code in a program that automatically repeats. One complete execution of all the statements within a loop is called an 'iteration' or 'pass'.The length of a loop is controlled by a conditional test made within the loop. While the tested conition is true, the loop will continue- until the test-expression is found to be false when the loop ends.
+					<p><strong>Problem</strong></p>
+					<p>The function which we have implemented earlier, addVBlock() and addHBlock(), will be implemented iteratively here. Instead of writing addVBlock() or addHblock() several times, you can use syntax like </p><center><p>repeat for i times addVBlock/addHblock()</p></center>
+					<p>The mentioned command written shall be repeated i times.</p>
+				</div>
+		</div>
+	</div>
+	<div class="col-md-4 no-left-padding" ng-switch on="showEditor">
+		<div class="header blue-bg white" ng-switch-when="false" style="padding: 14.5px;">
+				<button class="btn btn-sm red-bg white run pull-left" ng-click="show()"><span class="fa fa-code">&nbsp;</span>Show Code</button>
+				<h4 style="display: inline;">Code Zone</h4>
+				<button style=" z-index: 555;" class="btn btn-sm red-bg white run pull-right" ng-click="run()"><span class="fa fa-play">&nbsp;</span>Run</button>
+
+			</div>
+		<div ui-ace="{useWrapMode : true,
+      theme:'solarized_dark',
+      mode:'abap'}"  ng-model="code" ng-switch-when="false"></div>
+
+      <div class="header blue-bg white" ng-switch-when="true" style="padding: 14.5px;">
+				<button class="btn btn-sm red-bg white run pull-left" ng-click="show()"><span class="fa fa-code">&nbsp;</span>Hide Code</button>
+				<h4 style="display: inline;">Code Zone</h4>
+				<button style=" z-index: 555;" class="btn btn-sm red-bg white run pull-right disabled " ng-click="run()"><span class="fa fa-play">&nbsp;</span>Run</button>
+
+			</div>
+		<div ui-ace="{useWrapMode : true,
+      theme:'solarized_dark',
+      mode:'abap'}"  ng-model="read" readonly ng-switch-when="true"></div>
+		
+	</div>
+	<div class="col-md-5" style="margin-left: -40px; z-index: 100;">
+		<div class="game ">
+			<div class="level4"></div>
+			<div class="pikachu4"></div>
+			<div class="jigglypuff4"></div>
+
+		</div>
+	</div>
+</div>
+</div>

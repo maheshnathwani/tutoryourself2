@@ -1,0 +1,32 @@
+<div>
+	<header class="navbar navbar-default navbar-fixed-top navbar-inner red-bg">
+            <div class="navbar-brand" ng-show="loggedIn">
+                  <desk-menu desk-keypress> <!-- Optional callback, either use regular ng-click -->
+                        <span class="flaticon-round-account-button-with-user-inside"></span>
+                        <desk-option label="{{currentUser.name}}">
+                              <desk-dropdown>
+                                    <desk-dd-option >
+                                          <desk-icon><i class="flaticon-google-drive-document"></i></desk-icon>
+                                          <desk-label>Account</desk-label>
+                                    </desk-dd-option>
+                                    <desk-dd-option ng-click="logout()">
+                                          <desk-icon><i class="flaticon-enter-arrow"></i></desk-icon>
+                                          <desk-label>Logout</desk-label>
+                                    </desk-dd-option>
+                              </desk-dropdown>
+                        </desk-option>
+                  </desk-menu>
+            </div>
+            <div class="container">
+                  <a class="heading"  href="#">Tutor Yourself</a>
+            </div>
+      </header>
+	<nav mfb-menu position="tr" effect="slidein" label="Menu"
+	     active-icon="flaticon-close-button" resting-icon="flaticon-menu-button"
+	     toggling-method="hover">
+	      <button mfb-button icon="flaticon-home-button" label="Home" ui-sref="home"></button>
+	      <button mfb-button icon="flaticon-create-group-button" label="Register/Login" ui-sref="login"></button>
+	      <button mfb-button icon="flaticon-two-rows-and-three-columns-layout" label="About Us" ui-sref="about"></button>
+	      <button mfb-button icon="flaticon-user-inside-bubble-speech" label="Contact" ui-sref="contact"></button>
+	</nav>
+</div>

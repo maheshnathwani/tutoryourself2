@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tutoryourself">
+
+<head>
+  <base href="/">
+  <title>Tutor Yourself</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<!-- build:css lib/css/main.min.css -->
+  <link rel="stylesheet" type="text/css" href="css/font.css">
+  <link rel="stylesheet" type="text/css" href="css/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/icons.css">
+  <link rel="stylesheet" type="text/css" href="css/font/flaticon.css">
+  <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="components/bootstrap-material-design/dist/css/material.css">
+  <link rel="stylesheet" type="text/css" href="components/bootstrap-material-design/dist/css/ripples.css">
+  <link rel="stylesheet" type="text/css" href="components/ng-material-floating-button/mfb/dist/mfb.css">
+    <link rel="stylesheet" href="components/angular-flash-alert/dist/angular-flash.min.css">
+    <link rel="stylesheet" href="components/angular-desk-menu-master/prod/desk-menu.css">
+  <link rel="stylesheet" href="css/style.css" media="screen">
+  <!-- endbuild -->
+</head>
+
+<body  ng-controller="HomeCtrl" >
+  <div>
+    
+      <section ui-view keypress class="{{class}} {{direction || 'up'}}">
+        
+      </section>
+      <flash-message duration="3000" class="flashPop" show-close="true"></flash-message>
+
+  </div>
+
+ <!-- build:js lib/js/main.min.js -->   
+  <!-- Angular Material Dependencies -->
+  <script src="components/jquery/dist/jquery.min.js"></script>
+  <script src="components/angular/angular.min.js"></script>
+  <script src="components/angular-animate/angular-animate.min.js"></script>
+  <script src="components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="components/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="components/Angular-YouTube-master/dist/angularYouTube.min.js"></script>
+  <script src="components/angular-scroll-animate/dist/angular-scroll-animate.js"></script>
+  <script src="components/skrollr/dist/skrollr.min.js"></script>
+  <script src="components/angular-skrollr/dist/angular-skrollr.min.js"></script>
+  <script src="components/angular-bootstrap/ui-bootstrap-tpls.min.js" ></script>
+  <script type="text/javascript" src="components/ng-material-floating-button/src/mfb-directive.js"></script>
+  <script type="text/javascript" src="components/angular-ripple/angular-ripple.js"></script>
+  <script type="text/javascript" src="components/angular-animated-label/src/angular-animated-label.js"></script>
+  <script type="application/javascript" src="components/angular-flash-alert/dist/angular-flash.min.js"></script>
+  <script type="application/javascript" src="components/ngstorage/ngStorage.min.js"></script>
+  <script type="application/javascript" src="components/angular-desk-menu-master/prod/desk-menu.min.js"></script>
+  <script type="text/javascript" src="components/ace-builds/src-min-noconflict/ace.js"></script>
+  <script type="text/javascript" src="components/angular/angular.js"></script>
+  <script type="text/javascript" src="components/angular-ui-ace/ui-ace.js"></script>
+  <script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  
+<!-- endbuild -->
+  <!--<script type="text/javascript" src="js/dashboard.min.js"></script>-->
+
+  <!--Modules and Router-->
+  <script type="text/javascript" src="js/module.js"></script>
+  <script type="text/javascript" src="js/routes.js"></script>
+
+  <!--Controllers-->
+  <script type="text/javascript" src="js/controllers/homeController.js"></script>
+  <script type="text/javascript" src="js/controllers/registerController.js"></script>
+  <script type="text/javascript" src="js/controllers/loginController.js"></script>
+  <script type="text/javascript" src="js/controllers/otherController.js"></script>
+  <script type="text/javascript" src="templates/1/levelOneController.js"></script>
+  <script type="text/javascript" src="templates/2/levelTwoController.js"></script>
+  <script type="text/javascript" src="templates/3/levelThreeController.js"></script>
+  <script type="text/javascript" src="templates/4/levelFourController.js"></script>
+
+</body>
+
+</html> 

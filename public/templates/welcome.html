@@ -1,0 +1,59 @@
+<div>
+    <header class="navbar navbar-default navbar-fixed-top navbar-inner red-bg">
+        <div class="navbar-brand" ng-show="loggedIn">
+            <desk-menu desk-keypress> <!-- Optional callback, either use regular ng-click -->
+                <span class="flaticon-round-account-button-with-user-inside"></span>
+                <desk-option label="{{currentUser.name}}">
+                    <desk-dropdown>
+                        <desk-dd-option >
+                            <desk-icon><i class="flaticon-google-drive-document"></i></desk-icon>
+                            <desk-label>Account</desk-label>
+                        </desk-dd-option>
+                        <desk-dd-option ng-click="logout()">
+                            <desk-icon><i class="flaticon-enter-arrow"></i></desk-icon>
+                            <desk-label>Logout</desk-label>
+                        </desk-dd-option>
+                    </desk-dropdown>
+                </desk-option>
+            </desk-menu>
+        </div>
+        <div class="container">
+            <a class="heading"  href="#">Tutor Yourself</a>
+        </div>
+    </header>
+    <nav mfb-menu position="tr" effect="slidein" label="Menu"
+         active-icon="flaticon-close-button" resting-icon="flaticon-menu-button"
+         toggling-method="hover">
+        <button mfb-button icon="flaticon-home-button" label="Home" ui-sref="home"></button>
+        <button mfb-button icon="flaticon-create-group-button" label="Register/Login" ui-sref="login"></button>
+        <button mfb-button icon="flaticon-two-rows-and-three-columns-layout" label="About Us" ui-sref="about"></button>
+        <button mfb-button icon="flaticon-user-inside-bubble-speech" label="Contact" ui-sref="contact"></button>
+    </nav>
+</div>
+<div class="sub-header">
+    <h1 >Introduction</h1>
+</div>
+<div class="row">
+    <div class="col-md-5 left-margin col-sm-5">
+        <h1>Welcome, {{currentUser.name}}</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="x-18"><br><strong>TutorYourself</strong>, helps you think analytically. It helps you devise algorithms while you play games, killing the boring act of meddling with books
+                and videos. <br> <br>Go ahead and take a head start with your analytical skills!</p>
+                <div class="row">
+                    <br><br>
+                    <a ui-sref="level({user:'mahesh', id:5})">click me</a>
+                    <div class="col-md-6 col-md-offset-6">
+                        <button angular-ripple class="btn btn-info btn-block" ui-sref="level({user:currentUser.username, id:1})">Let's Play</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6  hidden-xs" style="padding-right: 0;">
+        <img src="../img/welcome.png" alt="Welcome" class="img-responsive pull-right" height="auto" width="79%">
+    </div>
+
+
+</div>
+

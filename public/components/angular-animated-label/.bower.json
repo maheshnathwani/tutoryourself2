@@ -1,0 +1,18 @@
+{
+  "name": "angular-animated-label",
+  "main": "./src/angular-animated-label.js",
+  "dependencies": {
+    "angular": "^1.0.8"
+  },
+  "homepage": "https://github.com/wender/angular-animated-label",
+  "_release": "7a7e8b75b9",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "7a7e8b75b92789d775c3a5716b80a64041765608"
+  },
+  "_source": "git://github.com/wender/angular-animated-label.git",
+  "_target": "*",
+  "_originalSource": "angular-animated-label",
+  "_direct": true
+}

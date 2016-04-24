@@ -1,0 +1,109 @@
+nav.desk-toolbar {
+  text-align: left;
+  color: white;
+}
+nav.desk-toolbar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative; }
+nav.desk-toolbar ul span:before {
+  font-size: 18px;
+
+}
+nav.desk-toolbar ul li {
+  display: inline-block; }
+
+nav.desk-toolbar ul ul {
+  display: block;
+  background-color: #FFF; }
+
+nav.desk-toolbar ul a {
+  display: block;
+  padding: 0.3em 0.1em;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  cursor: default;
+  border: 1px solid transparent; }
+
+nav.desk-toolbar > ul ul li {
+  padding: 0.4em 0.8em;
+  cursor: pointer;
+  width: 12em; }
+
+nav.desk-toolbar > ul ul a {
+  display: inline-block;
+  width: auto;
+  color: #333333;
+  padding-left: 15px;
+  cursor: pointer;
+  margin: 0;
+  font-size: 16px;
+}
+
+nav.desk-toolbar > ul > li > a:hover {
+  border: 1px solid #C6C6C6; }
+nav.desk-toolbar ul ul li .desk-toolbar-icon i:before {
+  font-size: 16px;
+}
+nav.desk-toolbar ul ul li .desk-toolbar-icon {
+  display: inline-block;
+  font-size: 12px;
+  padding: 2px 3px;
+  color: #333333;
+  margin: 0; }
+
+nav.desk-toolbar ul ul li .desk-toolbar-shortcut {
+  color: #999;
+  margin: 0;
+  text-align: right;
+  float: right;
+  position: relative; }
+
+nav.desk-toolbar > ul ul li:hover {
+  cursor: pointer;
+  background-color: #EEEEEE; }
+
+nav.desk-toolbar ul ul {
+  display: none;
+  position: absolute;
+  top: 1.8em;
+  -webkit-box-shadow: 0px 2px 4px 0px #CCC;
+  -moz-box-shadow: 0px 2px 4px 0px #CCC;
+  box-shadow: 0px 2px 4px 0px #CCC; }
+
+nav.desk-toolbar ul li:hover > ul {
+  display: inline; }
+
+nav.desk-toolbar ul li.desk-option-disabled:hover > ul {
+  display: none; }
+
+nav.desk-toolbar ul ul li {
+  float: none;
+  display: list-item;
+  position: relative; }
+
+/* Second, Third and more Tiers	*/
+nav.desk-toolbar ul ul ul {
+  position: absolute;
+  top: 0em;
+  left: 19.6em; }
+
+nav.desk-toolbar hr {
+  border: 0;
+  height: 1px;
+  /*background-image: linear-gradient(to right, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.10));*/
+  background-color: #DDDDDD;
+  width: 19em; }
+
+nav.desk-toolbar .desk-option-disabled {
+  cursor: default !important;
+  color: #AAA; }
+
+nav.desk-toolbar .desk-option-disabled:hover {
+  background-color: #FFF; }
+
+nav.desk-toolbar .desk-option-disabled a {
+  cursor: default;
+  color: #AAA; }
